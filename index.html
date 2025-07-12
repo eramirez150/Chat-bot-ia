@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chatbot Minimalista</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="chat">
-  <div class="mensaje ai">Hola, soy un bot. ¿En qué puedo ayudarte?</div>
-  <input type="text" id="pregunta">
-</div>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>Asistente IA</h1>
+            <div class="status">En línea</div>
+        </header>
 
+        <div class="chat-messages" id="chat-messages">
+            <!-- Mensajes aparecerán aquí dinámicamente -->
+            <div class="message bot-message">
+                <img src="assets/bot-icon.png" alt="Bot" class="bot-icon">
+                <div class="message-content">
+                    ¡Hola! Soy un bot de IA. ¿En qué puedo ayudarte hoy?
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Escribe tu mensaje..." autofocus>
+            <button id="send-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
